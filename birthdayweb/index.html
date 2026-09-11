@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> be happy </title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Hiasan -->
+    <div class="hearts">
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+    </div>
+
+
+    <!-- =========================
+         HALAMAN PEMBUKA
+    ========================== -->
+
+    <section id="home" class="page">
+
+        <div class="card opening">
+
+            <div class="love" > ♡
+
+            <p class="small-title">
+                SPECIAL WEBSITE FOR YOU
+            </p>
+
+            <h1>
+                hai hai! 
+            </h1>
+
+            <p>
+                Ada sesuatu kecil yang aku siapin
+                buat kamu.
+            </p>
+
+            <p>
+                Coba buka dulu...
+            </p>
+
+            <button onclick="openWebsite()">
+                Buka 🎁
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         HALAMAN UTAMA
+    ========================== -->
+
+    <section id="main" class="page hidden">
+
+        <div class="card">
+
+            <p class="small-title">
+                A LITTLE SOMETHING FOR YOU ✨
+            </p>
+
+            <h1>
+                hey, kamu! be happy
+                <span> 
+            </h1>
+
+            <p class="intro">
+                Semoga hari harimu menyenangkan yaa.
+            </p>
+
+
+            <div class="menu">
+
+                <button onclick="showSection('wish')">
+                    💌
+                    <span>Ucapan</span>
+                </button>
+
+                <button onclick="showSection('game')">
+                    🎮
+                    <span>Mini Game</span>
+                </button>
+
+                <button onclick="showSection('secret')">
+                    🎁
+                    <span>Surprise</span>
+                </button>
+
+                <button onclick="showSection('dont')">
+                    🚨
+                    <span>Jangan Dipencet</span>
+                </button>
+
+            </div>
+
+            <p class="footer">
+                dibuat khusus untuk kamu 🤍
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         UCAPAN
+    ========================== -->
+
+    <section id="wish" class="page hidden">
+
+        <div class="card content">
+
+            <button class="back"
+                onclick="showSection('main')">
+                ← kembali
+            </button>
+
+            <div class="icon">
+                💌
+            </div>
+
+            <h1>
+                Untuk Kamu 
+            </h1>
+
+            <p>
+                Hai kamuu
+            </p>
+
+            <p>
+                Semoga kamu selalu diberi kesehatan,
+                kebahagiaan, dan dimudahkan
+                dalam segala urusan.
+            </p>
+
+            <p>
+                Semoga semua hal yang kamu
+                inginkan perlahan bisa tercapai.
+                Jangan terlalu keras sama diri
+                sendiri dan jangan lupa buat
+                menikmati hal-hal kecil juga.
+            </p>
+
+            <p>
+                Makasih ya udah jadi bagian
+                dari cerita aku sampai sekarang.
+                Semoga kita masih bisa bikin
+                banyak cerita seru lainnya. 
+            </p>
+
+            <p class="closing">
+                Once again, I hope you’ll always be happy. 🤍
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         MINI GAME
+    ========================== -->
+
+    <section id="game" class="page hidden">
+
+        <div class="card content">
+
+            <button class="back"
+                onclick="showSection('main')">
+                ← kembali
+            </button>
+
+            <div class="icon">
+                🎮
+            </div>
+
+            <h1>
+                Tangkap Hatiku ❤️
+            </h1>
+
+            <p>
+                Klik hati sebanyak mungkin
+                sebelum waktu habis!
+            </p>
+
+            <div class="game-info">
+
+                <div>
+                    ❤️ Score
+                    <b id="score">0</b>
+                </div>
+
+                <div>
+                    ⏱️ Waktu
+                    <b id="time">15</b>
+                </div>
+
+            </div>
+
+            <div id="game-area">
+
+                <button id="heart"
+                    onclick="catchHeart()">
+                    ❤️
+                </button>
+
+            </div>
+
+            <button onclick="startGame()">
+                Mulai Game
+            </button>
+
+            <p id="game-result"></p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         JANGAN DIPENCET
+    ========================== -->
+
+    <section id="dont" class="page hidden">
+
+        <div class="card content">
+
+            <div class="warning">
+                🚨
+            </div>
+
+            <h1 id="dont-title">
+                Jangan Dipencet!
+            </h1>
+
+            <p id="dont-text">
+                Serius, tombol ini jangan dipencet.
+            </p>
+
+            <button onclick="pressDanger()">
+                Pencet 😭
+            </button>
+
+            <br><br>
+
+            <button class="back"
+                onclick="showSection('main')">
+                ← kembali
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SURPRISE
+    ========================== -->
+
+    <section id="secret" class="page hidden">
+
+        <div class="card content">
+
+            <button class="back"
+                onclick="showSection('main')">
+                ← kembali
+            </button>
+
+            <div class="gift">
+                🎁
+            </div>
+
+            <h1>
+                Satu hal lagi, ya...
+            </h1>
+
+            <p>
+                Sebenarnya, aku cuma mau bilang satu hal lagi.
+            </p>
+
+            <button onclick="openSecret()">
+                Buka Surprise ✨
+            </button>
+
+            <div id="secret-message"
+                 class="secret-message hidden">
+
+                <h2>
+                    🤍
+                </h2>
+
+                <p>
+                   Aku bersyukur bisa kenal sama kamu.
+                </p>
+
+                <p> 
+                   Semoga ke depannya, lebih banyak hal baik yang datang ke kamu.
+                </p>
+
+                <p>
+                    Dan semoga aku masih bisa
+                    nemenin kamu lebih lama!
+                </p>
+
+                <h2>
+                    So, be happy, okay? 
+                </h2>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Confetti -->
+
+    <div id="confetti"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
